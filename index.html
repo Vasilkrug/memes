@@ -6,6 +6,28 @@
     <title>Meme Generator</title>
 </head>
 <body>
-<script src="./scripts/index.js"></script>
+<div class="memes-wrapper">
+    <div class="content">
+        <canvas id="canvas" width="800" height="800"></canvas>
+    </div>
+    <aside class="aside">
+        <div class="menu image-menu">
+            <span>Изображение</span>
+            <a class="upload-img btn">Загрузить изображение</a>
+        </div>
+        <div class="menu color-menu">
+            <span>Цвет текста</span>
+            <div class="colors">
+                <ul class="colors-list"></ul>
+            </div>
+        </div>
+        <div class="menu input-menu">
+            <span>Введите текст</span>
+            <input class="input-meme-text" type="text">
+            <button class="btn">Добавить</button>
+        </div>
+    </aside>
+</div>
+<script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
