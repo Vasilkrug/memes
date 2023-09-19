@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Impact';
+    src: local('Impact'),
+    url('./fonts/Impact.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +31,7 @@ body {
 }
 
 #canvas {
-    background-color: #fFF;
+    background-color: gray;
 }
 
 .aside {
@@ -59,16 +65,34 @@ body {
     color: #FFFFFF;
     font-size: 16px;
 }
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.control-btn {
+    background-color: #404040;
+    height: 30px;
+    width: 30px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
 
 .input-meme-text {
     background-color: #404040;
     border: none;
     outline: none;
-    height: 30px;
+    height: 40px;
     width: 100%;
     border-radius: 6px;
     color: #FFFFFF;
     font-size: 18px;
+    padding: 10px;
 }
 
 .colors-list {
@@ -91,4 +115,3 @@ body {
 .color-item:hover {
     transform: scale(1.3);
 }
-

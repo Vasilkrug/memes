@@ -6,11 +6,20 @@ export class CanvasText {
         this.startY = null;
         this.texts = [];
         this.selectedText = -1;
+        this.fontSize = 50;
     }
+
+    increaseFontSize() {
+        this.fontSize += 1;
+    };
+
+    decreaseFontSize() {
+        this.fontSize -= 1;
+    };
 
     addNewText(text) {
         this.texts.push(text)
-    }
+    };
 
     textHittest(x, y, textIndex) {
         let text = this.texts[textIndex];
@@ -32,12 +41,12 @@ export class CanvasText {
     handleMouseUp(e) {
         e.preventDefault();
         this.selectedText = -1;
-    }
+    };
 
     handleMouseOut(e) {
         e.preventDefault();
         this.selectedText = -1;
-    }
+    };
 
     handleMouseMove(e) {
         if (this.selectedText < 0) {
@@ -55,5 +64,15 @@ export class CanvasText {
         let text = this.texts[this.selectedText];
         text.x += dx;
         text.y += dy;
-    }
+    };
+
+    clearText() {
+        this.offsetX = canvas.offsetLeft;
+        this.offsetY = canvas.offsetTop;
+        this.startX = null;
+        this.startY = null;
+        this.texts = [];
+        this.selectedText = -1;
+        this.fontSize = 50;
+    };
 }
